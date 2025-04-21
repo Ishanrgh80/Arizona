@@ -14,19 +14,14 @@ body,
 .Container {
 	height: 100%;
 	font-family: 'Alegreya Sans', sans-serif;
-	margin-bottom: 10px; 
 }
 
 body {
 	background-color: #e9e8e6;
 }
 
-.btn {
-	border-radius: 0;
-}
-
 a:link,
-a:hover,
+a:hover,	
 a:visited {
 	text-decoration: none;
 	color: #000;
@@ -451,8 +446,8 @@ p {
 
 .studio {
 	font-size: 1.2em;
-	padding-top: 5rem;  /* Reduced space from the top */
-    padding-bottom: 5rem; /* Reduced bottom padding */
+	padding-top: 8rem;
+	padding-bottom: 2rem;
 }
 
 
@@ -477,6 +472,12 @@ p {
 	background-color: #000;
 	border-color: #000;
 }
+.btn {
+	border-radius: 10px;
+	order: 2px solid transparent;
+   	transition: all 0.3s ease-in-out;
+	border-width: 2px;
+}
 
 .contact-form .form-control {
 	color: #000;
@@ -486,18 +487,129 @@ p {
 	border-radius: 0;
 	border-style: solid;
 	font-size: 1.5rem;
+	padding: 1rem 1rem 1rem 0.75rem;
 }
 
 .form-control::-webkit-input-placeholder {
 	color: #000;
 	opacity: 0.6;
 }
+.contact-form .form-control:focus {
+    border-color: #000;
+    outline: none !important;
+    box-shadow: none !important;;
+}
+.contact-form .form-control:focus-visible {
+    outline: none;
+    border-color: #000;
+}
+.contact-form .form-group {
+    display: flex;
+    gap: 20px; /* Adds space between the input fields */
+	align-items: center;
+}
+.btn-primary:hover {
+    background-color: white !important;
+    color: black !important;
+    border-color: black !important;
+}
+
+/* Remove unwanted blue outline on focus */
+.btn-primary:focus {
+    box-shadow: none !important;
+}
+
+.btn-loader {
+    position: relative;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: 600;
+  }
+
+  .btn-loader.loading {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .spinner {
+    border: 2px solid white;
+    border-top: 2px solid black; /* black spinner */
+    background-color: white;     /* white background inside spinner */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .disabled-button {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+.asterisk{
+	margin-right: -15px;
+}
+
 
 .form-control {
-	padding: 1rem 1rem;
+	padding: 1rem 15rem 1rem 0.75rem;
+	width: 50%;
 }
+input.form-control::placeholder {
+	color: #999;
+  }
+  
+  input.form-control {
+	border: 2px solid #000;
+	transition: border 0.2s ease-in-out;
+  }
 
 .contact-form .btn {
 	padding: 0.8rem 4rem;
-	border-radius: 5px;
+	color: #fff;
+    background-color: #000;
+    border-color: #000;
+	font-weight: 600;
+	border-radius: 10px;
+	margin-left: 2%;
 }
+
+
+/* Custom footer container class */
+ 
+ /* Social Media Icons */
+ .social-icon {
+	font-size: 1.5rem; /* Adjust icon size */
+	color: #333; /* Icon color */
+	margin: 0 10px; /* Spacing between icons */
+	transition: color 0.3s ease;
+ }
+ 
+ .social-icon:hover {
+	color: #000; /* Change color on hover */
+ }
+ 
+ /* Optional: Adjust size for mobile responsiveness */
+ @media (max-width: 768px) {
+	.social-icon {
+	   font-size: 1rem;
+	}
+ }
+
+ html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+.container-fluid {
+    max-width: 100%; /* Ensures it doesn't exceed the viewport */
+}
+ 
